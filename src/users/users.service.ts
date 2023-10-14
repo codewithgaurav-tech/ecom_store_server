@@ -13,4 +13,7 @@ export class UsersService {
         const newUser = new this.userModel(userDto);
         return newUser.save();
     }
+    async GetUser() {
+        return this.userModel.find().exec();
+    }
 }
